@@ -14,7 +14,7 @@ export default class App extends React.Component {
   fetchQuestion() {
     fetch('https://opentdb.com/api.php?amount=1&type=boolean')
       .then(response => response.json())
-      .then(question => this.setState({ question: question.results[0]["question"] }));
+      .then(question => this.setState({ question: question.results[0]["question"].replace(/(&quot\;)/g,"\"") }));
     this.setState({ question: '...' });
   }
 
