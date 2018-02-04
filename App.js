@@ -3,12 +3,6 @@ import { StyleSheet, Text, View, Button, TouchableHighlight } from 'react-native
 
 export default class App extends React.Component {
   state = { question: 'Tap here for a question' }
-  // fetchQuestion() {
-  //   fetch('https://xkcd.com/1002/info.0.json')
-  //     .then(response => response.json())
-  //     .then(question => this.setState({ question: question.img }));
-  //   this.setState({ question: '...' });
-  // }
 
   // This works and displays the question
   fetchQuestion() {
